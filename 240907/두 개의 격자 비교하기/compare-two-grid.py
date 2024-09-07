@@ -11,7 +11,7 @@ array2 = []
 for j in range(n):
     array2.append(list(map(int, input().split())))
 
-array3 = [[0] * n for _ in range(m)]
+array3 = [[0] * m for _ in range(n)]
 for i in range(n):
     for j in range(m):
         if array1[i][j] == array2[i][j]:
