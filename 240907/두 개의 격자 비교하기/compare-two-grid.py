@@ -21,13 +21,3 @@ for i in range(n):
 
 for num in array3:
     print(*num)
-
-for i in range(n):
-    for j in range(m):
-        if array1[i][j] == array2[i][j]:
-            array3[i][j] = 0
-        else:
-            array3[i][j] = 1
-
-for num in array3:
-    print(*num)
