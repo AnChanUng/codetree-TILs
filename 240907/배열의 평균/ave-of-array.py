@@ -1,7 +1,8 @@
 array = []
 for i in range(2):
     numbers = list(map(int, input().split()))
-    print(sum(numbers) / 4, end = " ")
+    garo = round((sum(numbers)/4), 1)
+    print(garo, end = " ")
     array.append(numbers)
 
 print()
@@ -11,7 +12,9 @@ for i in range(4):
     for j in range(2):
         result += array[j][i]
         total += array[j][i]
-    print(result/2, end=" ")
+    sero = round(result/2, 1)
+    print(sero, end=" ")
 
 print()
-print(total / 8)
+res = round(total / 8, 1)
+print(res)
