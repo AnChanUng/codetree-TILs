@@ -9,7 +9,7 @@ for i in range(m):
             array[j][i] = cnt 
             cnt += 1
     else:
-        for j in range(n-i ,-1, -1):   
+        for j in range(n-i, -1, -1):   
             array[j][i] = cnt
             cnt += 1 
 
