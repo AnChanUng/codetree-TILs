@@ -1,21 +1,15 @@
 import sys
 input = sys.stdin.readline
 
-n, m = map(int, input().split().strip())
+n, m = map(int, input().split())
 
-array = []
-for i in range(8):
-    array.append(list(map(int, input().split().strip())))
-
-array1 = [[0] * n for _ in range(m)]
+array1 = []
 for i in range(4):
-    for j in range(4):
-        array1[i][j] = array[i][j]
+    array1.append(list(map(int, input().split())))
 
-array2 = [[0] * n for _ in range(m)] 
-for i in range(4, 8):
-    for j in range(4):
-        array2[i-4][j] = array[i][j]
+array2 = []
+for j in range(4, 8):
+    array2.append(list(map(int, input().split())))
 
 array3 = [[0] * n for _ in range(m)]
 for i in range(n):
