@@ -4,9 +4,14 @@ array = [[0] * m for _ in range(n)]
 
 cnt = 0
 for i in range(m):
-    for j in range(n):
-        array[j][i] = cnt
-        cnt += 1
+    if i % 2 == 0:
+        for j in range(n):
+            array[j][i] = cnt 
+            cnt += 1
+    else:
+        for j in range(n-i ,-1, -1):   
+            array[j][i] = cnt
+            cnt += 1 
 
-for num in array:
-    print(*num)
+for i in array:
+    print(*i)
