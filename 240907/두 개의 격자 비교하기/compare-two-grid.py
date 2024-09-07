@@ -1,11 +1,11 @@
 import sys
 input = sys.stdin.readline
 
-n, m = map(int, input().split())
+n, m = map(int, input().split().strip())
 
 array = []
 for i in range(8):
-    array.append(list(map(int, input().split())))
+    array.append(list(map(int, input().split().strip())))
 
 array1 = [[0] * n for _ in range(m)]
 for i in range(4):
