@@ -9,4 +9,6 @@ for i in range(len(a)-1):
         result += a[i] + str(cnt)
         cnt = 1
 
+result += a[-1] + str(cnt)
+print(len(result))
 print(result)
