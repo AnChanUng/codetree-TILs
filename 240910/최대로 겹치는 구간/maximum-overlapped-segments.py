@@ -1,6 +1,6 @@
 n = int(input())
 
-array = [0] * 101
+array = [0] * 202
 for _ in range(n):
     x1, x2 = map(int, input().split())
     
