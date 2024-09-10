@@ -24,3 +24,4 @@ for _ in range(q):
         
         for wo in s:
             print(*wo, end="")
+        print()
