@@ -9,8 +9,8 @@ for _ in range(n):
             graph[x][y] = 1
             
 area = 0
-for i in range(101):
-    for j in range(101):
+for i in range(100):
+    for j in range(100):
         if graph[i][j] == 1:
             area += 1
 
