@@ -1,6 +1,6 @@
 n = int(input())
 
-graph = [[0] * 101 for _ in range(101)]
+graph = [[0] * 201 for _ in range(201)]
 for _ in range(n):
     x1, y1 = map(int, input().split())
 
@@ -9,8 +9,8 @@ for _ in range(n):
             graph[x][y] = 1
             
 area = 0
-for i in range(100):
-    for j in range(100):
+for i in range(201):
+    for j in range(201):
         if graph[i][j] == 1:
             area += 1
 
