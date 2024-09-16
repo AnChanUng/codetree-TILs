@@ -6,7 +6,7 @@ for _ in range(n):
     array.append(number)
 
 cnt = 1
-max_cnt = 0
+max_cnt = 1
 for i in range(len(array)-1):
     if array[i] == array[i+1]:
         cnt += 1
