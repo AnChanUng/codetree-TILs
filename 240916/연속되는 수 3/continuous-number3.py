@@ -1,9 +1,5 @@
 n = int(input())
-
-array = []
-for _ in range(n):
-    number = int(input())
-    array.append(number)
+array = [int(input()) for _ in range(n)]
 
 cnt = 1
 max_cnt = 0
