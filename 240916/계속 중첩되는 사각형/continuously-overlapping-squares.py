@@ -1,21 +1,23 @@
 n = int(input())
+rect = [list(map(int, input().split())) for _ in range(n)]
 
 graph = [[0] * 201 for _ in range(201)]
 area = 0
 
-x1, y1, x2, y2 = map(int, input().split())
-x3, y3, x4, y4 = map(int, input().split()) 
+for i in range(n):
+    x1, y1, x2, y2 = rect[i]
 
-for x in range(x3, x4+1):
-    for y in range(y3, y4+1):
-        if graph[x][y]:
-            graph[x][y] = 2
-        else:
-            graph[x][y] = 1
-    
-for i in range(201):
-    for j in range(201):
-        if graph[i][j] == 1 or graph[i][j] == 2:
-            area += 1  
-    
+    if i % 2 == 1:
+        color = 2
+    else:
+        color = 1
+    for x in range(x1, x2):
+        for y in range(y1, y2):
+            graph[x][y] = color
+
+for x in range(201):
+    for y in range(201):
+        if graph[x][y] == 2:
+            area += 1
+
 print(area)
