@@ -5,14 +5,13 @@ for _ in range(n):
     number = int(input())
     array.append(number)
 
-cnt = 1
-max_cnt = 1
-for i in range(len(array)-1):
-    if array[i] == array[i+1]:
+ans, cnt = 0, 0
+for i in range(n):
+    if i >= 1 and array[i] == array[i-1]:
         cnt += 1
-        max_cnt = max(max_cnt, cnt)
     else:
-        max_cnt = max(max_cnt, cnt)
         cnt = 1
+    
+    ans = max(ans, cnt)
 
-print(max_cnt)
+print(ans)
