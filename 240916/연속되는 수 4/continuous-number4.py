@@ -4,7 +4,7 @@ array = [int(input()) for _ in range(n)]
 cnt = 1
 max_cnt = 0
 for i in range(n):
-    if array[i-1] < array[i]:
+    if i >= 1 and array[i-1] < array[i]:
         cnt += 1
     else:
         cnt = 1
