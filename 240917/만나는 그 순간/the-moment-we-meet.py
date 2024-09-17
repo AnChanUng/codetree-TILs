@@ -27,4 +27,4 @@ for _ in range(m):
 
     array2.append(distance2)
 
-print(array1[-1] - array[-2])
+print(array1[-1] - array2[-2])
