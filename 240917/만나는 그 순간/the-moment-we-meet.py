@@ -18,7 +18,6 @@ array2 = []
 for _ in range(m):
     d, t = input().split()
     t = int(t)
-    print(d, t)
 
     if d == 'L':
         distance2 -= t
