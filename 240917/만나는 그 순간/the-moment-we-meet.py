@@ -26,3 +26,5 @@ for _ in range(m):
         distance2 += t
 
     array2.append(distance2)
+
+print(array1[-1] - array[-2])
