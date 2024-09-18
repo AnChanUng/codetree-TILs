@@ -15,6 +15,7 @@ for i in range(len(array)):
     
     if arr[array[i]] == k:
         print(arr.index(arr[arr[i]]))
+        found = True
         break
 
 if not found:
