@@ -13,3 +13,4 @@ for i in array:
         break
     else:
         print(-1)
+        break
