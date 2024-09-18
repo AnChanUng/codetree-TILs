@@ -7,10 +7,13 @@ for _ in range(m):
 
 cnt = 0
 for i in array:
-    arr[i] += 1
-    if arr[i] == k:
+
+    if arr[i] != k:
+        arr[i] += 1
         print(arr.index(arr[i]))
         break
     else:
-        print(-1)
-        break
+        arr[i] += 1
+        if arr[i] == k:
+            print(arr.index(arr[i]))
+            break
