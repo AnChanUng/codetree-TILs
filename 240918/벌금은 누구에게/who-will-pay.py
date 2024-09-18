@@ -8,7 +8,7 @@ arr = [0] * (n+1)
 
 ans = -1
 for num in array:
-    arr[array[i]] += 1
+    arr[num] += 1
     
     if arr[num] >= k:
         ans = num
