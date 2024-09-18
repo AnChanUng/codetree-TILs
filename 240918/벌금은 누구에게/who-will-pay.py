@@ -17,3 +17,5 @@ for i in array:
         if arr[i] == k:
             print(arr.index(arr[i]))
             break
+        else:
+            print(-1)
