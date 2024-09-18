@@ -3,19 +3,15 @@ input = sys.stdin.readline
 
 n, m, k = map(int, input().split())
 
+array = [int(input()) for _ in range(m)]
 arr = [0] * (n+1)
-array = []
-for _ in range(m):
-    array.append(int(input()))
 
-found = False
-for i in range(len(array)):
-    
+ans = -1
+for num in array:
     arr[array[i]] += 1
     
-    if arr[array[i]] == k:
-        print(array[i])
+    if arr[num] >= k:
+        ans = num
         break
 
-if not found:
-    print(-1)
+print(ans)
