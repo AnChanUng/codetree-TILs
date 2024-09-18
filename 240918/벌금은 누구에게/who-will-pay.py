@@ -5,6 +5,7 @@ array = []
 for _ in range(m):
     array.append(int(input()))
 
+found = False
 for i in range(len(array)):
     
     arr[array[i]] += 1
@@ -12,3 +13,6 @@ for i in range(len(array)):
     if arr[array[i]] == k:
         print(arr.index(arr[arr[i]]))
         break
+
+if not found:
+    print(-1)
