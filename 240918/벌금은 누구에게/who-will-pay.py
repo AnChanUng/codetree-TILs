@@ -1,6 +1,6 @@
 n, m, k = map(int, input().split())
 
-arr = [0] * (m+1)
+arr = [0] * (n+1)
 array = []
 for _ in range(m):
     array.append(int(input()))
