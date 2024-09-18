@@ -14,7 +14,7 @@ for i in range(len(array)):
     arr[array[i]] += 1
     
     if arr[array[i]] == k:
-        print(arr.index(arr[arr[i]]))
+        print(array[i])
         found = True
         break
 
