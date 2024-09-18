@@ -15,7 +15,6 @@ for i in range(len(array)):
     
     if arr[array[i]] == k:
         print(array[i])
-        found = True
         break
 
 if not found:
