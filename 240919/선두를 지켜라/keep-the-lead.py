@@ -18,7 +18,7 @@ for _ in range(n):
 
 leader = 0
 ans = 0
-for i in range(n):
+for i in range(1, time_a):
     if a[i] > b[i]:
         if leader == 2:
             ans += 1
