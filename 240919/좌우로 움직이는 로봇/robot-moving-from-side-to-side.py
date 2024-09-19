@@ -19,7 +19,7 @@ for _ in range(m):
     if d == 'R':
         b[j] = b[j-1] + t
     elif d == 'L':
-        b[j] = b[j-1] + t
+        b[j] = b[j-1] - t
     j += 1
 
 leader = 0
