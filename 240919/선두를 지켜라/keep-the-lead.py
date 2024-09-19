@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
-a = [0] * (1000000+1)
-b = [0] * (1000000+1)
+a = [0] * (1000001)
+b = [0] * (1000001)
 
 time_a = 1
 for _ in range(n):
@@ -10,19 +10,20 @@ for _ in range(n):
         time_a += 1
 
 time_b = 1
-for _ in range(m):
+for _ in range(n):
     v, t = map(int, input().split())
     for _ in range(t):
-        b[time_b] = b[time_b-1] + v
+        b[time_a] = b[time_a-1] + v
         time_b += 1
 
-leader, ans = 0, 0
-for i in range(1, time_a):
+leader = 0
+ans = 0
+for i in range(n):
     if a[i] > b[i]:
         if leader == 2:
             ans += 1
         leader = 1
-
+    
     elif a[i] < b[i]:
         if leader == 1:
             ans += 1
