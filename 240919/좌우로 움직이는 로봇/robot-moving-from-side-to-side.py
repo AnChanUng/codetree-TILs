@@ -23,7 +23,7 @@ for _ in range(m):
     j += 1
 
 leader = 0
-ans = 0
+ans = 1
 for num in range(1, i):
     if a[num] > b[num]:
         if leader == 2:
