@@ -6,8 +6,8 @@ time_a = 1
 for _ in range(n):
     t, d = input().split()
     t = int(t)
-
-    for _ in range(1, t+1):
+    
+    for _ in range(t):
         if d == 'L':
             a[time_a] = a[time_a-1] - 1
         elif d == 'R':
@@ -19,7 +19,7 @@ for _ in range(m):
     t, d = input().split()
     t = int(t)
 
-    for _ in range(1, t+1):
+    for _ in range(t):
         if d == 'L':
             b[time_b] = b[time_b-1] - 1
         elif d == 'R':
@@ -33,10 +33,10 @@ elif time_a > time_b:
     for i in range(time_b, time_a):
         b[i] = b[i-1]
 
+max_time = max(time_a, time_b)
 cnt = 0
-time_max = max(time_a, time_b)
-for i in range(1, time_max):
+for i in range(1, max_time):
     if a[i] == b[i] and a[i-1] != b[i-1]:
-        cnt += 1
+        cnt += 1 
 
 print(cnt)
