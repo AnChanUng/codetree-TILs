@@ -16,9 +16,16 @@ for _ in range(m):
         b[time_b] = b[time_b-1] + v
         time_b += 1
 
-cnt = 0
-for i in range(len(a)):
+leader, ans = 0, 0
+for i in range(1, time_a):
     if a[i] > b[i]:
-        cnt += 1
+        if leader == 2:
+            ans += 1
+        leader = 1
 
-print(cnt)
+    elif a[i] < b[i]:
+        if leader == 1:
+            ans += 1
+        leader = 2
+
+print(ans)
