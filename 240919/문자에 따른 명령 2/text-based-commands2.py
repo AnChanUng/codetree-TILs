@@ -15,4 +15,4 @@ for i in range(len(word)):
         if word[i+1] == 'F':
             ny = y + dy[dir_num]
 
-print(nx, ny)
+print(x, y)
