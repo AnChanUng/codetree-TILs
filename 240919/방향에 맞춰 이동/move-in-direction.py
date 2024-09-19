@@ -7,7 +7,7 @@ for _ in range(n):
     direction, distance = input().split()
     distance = int(distance)
 
-    if direction == 'w':
+    if direction == 'W':
         dir = 0
     elif direction == 'E':
         dir = 1
