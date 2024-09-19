@@ -10,7 +10,7 @@ for _ in range(n):
         time_a += 1
 
 time_b = 1
-for _ in range(n):
+for _ in range(m):
     v, t = map(int, input().split())
     for _ in range(t):
         b[time_a] = b[time_a-1] + v
