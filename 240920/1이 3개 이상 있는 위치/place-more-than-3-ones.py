@@ -1,8 +1,8 @@
 n = int(input())
 array = [list(map(int, input().split())) for _ in range(n)]
     
-dxs = [0, 1, 0, -1]
-dys = [1, 0, -1, 0]
+dxs = [-1, 1, 0, 0]
+dys = [0, 0, -1, 1]
 
 res = 0
 for x in range(n):
