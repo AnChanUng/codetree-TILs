@@ -11,9 +11,9 @@ for _ in range(n):
         dir = 0
     elif direction == 'E':
         dir = 1
-    elif direction == 'S':
-        dir = 2
     elif direction == 'N':
+        dir = 2
+    elif direction == 'S':
         dir = 3
 
     x += dx[dir] * distance
