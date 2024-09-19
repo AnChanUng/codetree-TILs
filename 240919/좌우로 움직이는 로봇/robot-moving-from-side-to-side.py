@@ -25,12 +25,12 @@ for _ in range(m):
 leader = 0
 ans = 1
 for num in range(1, i):
-    if a[num] > b[num]:
+    if a[num] >= b[num]:
         if leader == 2:
             ans += 1
         leader = 1
     
-    elif a[num] < b[num]:
+    elif a[num] <= b[num]:
         if leader == 1:
             ans += 1
         leader = 2
