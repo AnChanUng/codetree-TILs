@@ -1,20 +1,22 @@
 n = int(input())
+x, y = 0, 0
 
-ans = [0, 0]
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
 for _ in range(n):
     direction, distance = input().split()
     distance = int(distance)
 
-    if direction == 'N':
-        ans[1] += distance
-            
-    elif direction == 'W':
-        ans[0] -= distance
-
+    if direction == 'w':
+        dir = 0
     elif direction == 'E':
-        ans[0] += distance
-
+        dir = 1
     elif direction == 'S':
-        ans[1] -= distance
+        dir = 2
+    elif direction == 'N':
+        dir = 3
 
-print(*ans)
+    x += dx[dir] * distance
+    y += dy[dir] * distance
+
+print(x, y)
