@@ -1,18 +1,16 @@
-word = list(input())
+word = input()
 dir_num = 3
-dx = [1, -1, 0, 0]
-dy = [0, 0, -1, 1]
-
+dx = [1, 0, -1, 0]
+dy = [0, -1, 0, 1]
 x, y = 0, 0
-dir_num = (dir_num + 1) % 4
-dir_num = (dir_num + 3) % 4
 
-for i in range(len(word)):
-    if word[i] == 'L':
-        if word[i+1] == 'F':
-            nx = x + dx[dir_num]
-    elif word[i] == 'R':
-        if word[i+1] == 'F':
-            ny = y + dy[dir_num]
+for i in word:
+    if i == 'L':
+        dir_num = (dir_num -1 + 4) % 4
+    elif i == 'R':
+        dir_num = (dir_num + 1) % 4
+    else:
+        x = x + dx[dir_num]
+        y = y + dy[dir_num]
 
 print(x, y)
