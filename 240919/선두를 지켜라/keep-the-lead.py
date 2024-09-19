@@ -13,7 +13,7 @@ time_b = 1
 for _ in range(m):
     v, t = map(int, input().split())
     for _ in range(t):
-        b[time_a] = b[time_a-1] + v
+        b[time_b] = b[time_b-1] + v
         time_b += 1
 
 leader = 0
