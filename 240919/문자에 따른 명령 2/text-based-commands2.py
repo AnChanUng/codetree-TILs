@@ -1,8 +1,9 @@
 word = input()
+dir_num = 3
 
 dx = [-1, 0, -1, 0]
 dy = [0, -1, 0, 1]
-dir_num = 3
+
 x, y = 0, 0
 for i in word:
     if i == 'L':
