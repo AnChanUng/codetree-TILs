@@ -14,7 +14,7 @@ for i in range(1, n*m+1):
     nx = x + dx[dir_num]
     ny = y + dy[dir_num]
     
-    if 0 <= nx < n and 0 <= ny < n and array[nx][ny] == 0:
+    if 0 <= nx < n and 0 <= ny < m and array[nx][ny] == 0:
         x = x + dx[dir_num]
         y = y + dy[dir_num]
         array[x][y] = words[i % 26]
