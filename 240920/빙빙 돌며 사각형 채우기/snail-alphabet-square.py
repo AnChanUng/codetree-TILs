@@ -10,7 +10,7 @@ y = 0
 array[x][y] = words[0]
 
 dir_num = 0
-for i in range(1, n*m+1):
+for i in range(1, n*m):
     nx = x + dx[dir_num]
     ny = y + dy[dir_num]
     
