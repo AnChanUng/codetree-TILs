@@ -9,24 +9,20 @@ dir_num = 0
 x = n // 2
 y = n // 2
 array[x][y] = 1
-
 for i in range(2, n*n+1):
-    while True:
-        nx = x + dx[dir_num]
-        ny = y + dy[dir_num]
+    nx = x + dx[dir_num]
+    ny = y + dy[dir_num]
 
-        if 0 <= nx < n and 0 <= ny < n and array[nx][ny] == 0:
-            x = nx
-            y = ny
-            array[x][y] = i
-            break
+    if 0 <= nx < n and 0 <= ny < n and array[nx][ny] == 0:
+        x = x + dx[dir_num]
+        y = y + dy[dir_num]
+        array[x][y] = i
 
-        else:
-            dir_num = (dir_num+3) % 4
-            x = x + dx[dir_num]
-            y = y + dy[dir_num]
-            array[x][y] = i
-            break
+    else:
+        dir_num = (dir_num+3) % 4
+        x = x + dx[dir_num]
+        y = y + dy[dir_num]
+        array[x][y] = i
 
 for i in range(n):
     for j in range(n):
