@@ -17,8 +17,8 @@ for i in range(2, n*m+1):
         if nx < 0 or ny < 0 or nx >= n or ny >= m or array[nx][ny] != 0:
             dir_num = (dir_num + 3) % 4
         else:
-            x = x + dx[dir_num]
-            y = y + dy[dir_num]
+            x = nx
+            y = ny
             array[x][y] = i
 
 for i in range(n):
