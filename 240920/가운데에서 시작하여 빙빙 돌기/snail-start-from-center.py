@@ -14,8 +14,8 @@ for i in range(2, n*n+1):
     ny = y + dy[dir_num]
 
     if 0 <= nx < n and 0 <= ny < n and array[nx][ny] == 0:
-        x = x + dx[dir_num]
-        y = y + dy[dir_num]
+        x = nx
+        y = ny
         array[x][y] = i
 
     else:
