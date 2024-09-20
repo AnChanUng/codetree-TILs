@@ -23,8 +23,8 @@ for i in range(2, n*n+1):
         x = x + dx[dir_num]
         y = y + dy[dir_num]
         array[x][y] = i
-
-for i in range(n):
-    for j in range(n):
-        print(array[i][j], end = " ")
-    print()
+print(array)
+# for i in range(n):
+#     for j in range(n):
+#         print(array[i][j], end = " ")
+#     print()
