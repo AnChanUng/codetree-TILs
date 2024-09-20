@@ -3,13 +3,13 @@ n = int(input())
 array = [[0] * n for _ in range(n)]
 
 dx = [0, -1, 0, 1]
-dy = [1, 0, -1, 0]
+dy = [-1, 0, 1, 0]
 
 dir_num = 0
 x = n - 1
 y = n - 1
 array[x][y] = n * n
-for i in range(2, n*n+1):
+for i in range(n**2-1, 0, -1):
     nx = x + dx[dir_num]
     ny = y + dy[dir_num]
 
