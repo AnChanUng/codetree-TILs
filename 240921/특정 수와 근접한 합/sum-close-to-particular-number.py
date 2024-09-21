@@ -5,7 +5,7 @@ numbers = list(map(int, input().split()))
 
 numbers.sort()
 
-min_num = 100001
+min_num = 1000001
 for num in combinations(numbers, n-2):
     if sum(num) - s < min_num:
         min_num = min(sum(num)-s, min_num)
