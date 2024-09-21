@@ -10,4 +10,4 @@ for num in combinations(numbers, n-2):
     if sum(num) - s < min_num:
         min_num = min(sum(num)-s, min_num)
 
-print(min_num)
+print(abs(min_num))
