@@ -3,11 +3,16 @@ from itertools import combinations
 n, s = map(int, input().split())
 numbers = list(map(int, input().split()))
 
-numbers.sort()
+min_diff = 100001
 
-min_num = 10001
-for num in combinations(numbers, n-2):
-    if sum(num) - s <= min_num:
-        min_num = min(sum(num)-s, min_num)
+for combo in combinations(numbers, 2):
+    sum_excluded = sum(combo)
+    
+    remaining_sum = sum(numbers) - sum_excluded
+    
+    diff = abs(remaining_sum - s)
+    
+    if diff < min_diff:
+        min_diff = diff
 
-print(abs(min_num))
+print(min_diff)
