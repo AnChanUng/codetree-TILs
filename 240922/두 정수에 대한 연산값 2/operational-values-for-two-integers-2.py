@@ -1,12 +1,11 @@
 a, b = map(int, input().split())
 
-if a < b:
-    small = a + 10
-    big = b * 2
-    print(small, big)
-elif a > b:
-    small = b + 10
-    big = a * 2
-    print(small, big)
-else:
-    break
+def solution(a, b):
+    if a < b:
+        small = a + 10
+        big = b * 2
+        return small, big
+    elif a > b:
+        small = b + 10
+        big = a * 2
+        return small, big
