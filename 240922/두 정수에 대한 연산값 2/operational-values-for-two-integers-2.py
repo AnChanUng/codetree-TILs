@@ -8,3 +8,5 @@ elif a > b:
     small = b + 10
     big = a * 2
     print(small, big)
+else:
+    break
