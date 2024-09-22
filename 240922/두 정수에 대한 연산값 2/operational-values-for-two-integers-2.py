@@ -4,5 +4,5 @@ def solution(a, b):
     return small, big
 
 a, b = map(int, input().split())
-
-print(*solution(a, b))
+result = solution(a, b)
+print(*result)
