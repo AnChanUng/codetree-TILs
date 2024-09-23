@@ -5,6 +5,7 @@ cnt = 0
 for i in range(n):
     for j in range(i+1, n):
         for k in range(j+1, n):
-            if numbers[i] < numbers[j] < numbers[k]:
+            print(i, j, k)
+            if numbers[i] <= numbers[j] <= numbers[k]:
                 cnt += 1
 print(cnt)
