@@ -7,8 +7,9 @@ for i in range(len(a)):
         break
 
     if a.count(1) == len(a)-1:
+        a[len(a)-1] = 0
         break
-
+        
 res = 0
 for i in range(len(a)):
     res += a[i] * 2 ** (len(a)-(i+1))
