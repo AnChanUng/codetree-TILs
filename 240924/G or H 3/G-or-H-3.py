@@ -19,7 +19,7 @@ for i in range(len(array)):
         if abs(array[i][0] - array[j][0]) == k:
             result = [x[1] for x in array[i:j+1]]
             
-            if max_sum < sum(result):
+            if sum(result) < max_sum:
                 max_sum = max(max_sum, sum(result))
 
 print(max_sum)
