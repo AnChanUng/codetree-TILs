@@ -1,8 +1,12 @@
 a = list(map(int, input()))
 
 for i in range(len(a)):
+    
     if a[i] == 0:
         a[i] = 1
+        break
+
+    if a.count(1) == len(a)-1:
         break
 
 res = 0
