@@ -16,7 +16,7 @@ array.sort(key=lambda x: x[0])
 max_sum = 0
 for i in range(len(array)):
     for j in range(i+1, len(array)):
-        if abs(array[i][0] - array[j][0]) == k:
+        if abs(array[i][0] - array[j][0]) >= k:
             result = [x[1] for x in array[i:j+1]]
             if sum(result) > max_sum:
                 max_sum = max(max_sum, sum(result))
