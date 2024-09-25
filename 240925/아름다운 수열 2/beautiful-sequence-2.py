@@ -10,6 +10,6 @@ for i in range(n-m+1):
         num = list(num)
         if numbers[i:i+m] == num:
             cnt += 1
-            continue
+            break
     
 print(cnt)
