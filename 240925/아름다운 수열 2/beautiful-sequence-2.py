@@ -8,7 +8,9 @@ cnt = 0
 for i in range(n-m+1):
     for num in permutations(check, m):
         num = list(num)
-        if check[i:i+m] == num:
+        # print("check[i:i+m]", check[i:i+m])
+        # print("num", num)
+        if numbers[i:i+m] == num:
             cnt += 1
     
 print(cnt)
