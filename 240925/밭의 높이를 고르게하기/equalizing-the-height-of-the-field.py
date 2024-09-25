@@ -6,7 +6,7 @@ for i in range(n-t+1):
     res = 0
     for j in range(t):
         res += abs(h - array[j])
-        if res < min_res:
+        if res > min_res:
             min_res = min(min_res, res)
     #print("res", res)
 
