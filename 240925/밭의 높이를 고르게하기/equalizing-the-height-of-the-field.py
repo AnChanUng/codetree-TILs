@@ -1,7 +1,7 @@
 n, h, t = map(int, input().split())
 array = list(map(int, input().split()))
 
-min_res = 1001
+min_res = 10001
 for i in range(n-t+1):
     res = 0
     for j in range(t):
