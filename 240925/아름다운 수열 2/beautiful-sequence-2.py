@@ -1,4 +1,4 @@
-from itertools import permutations
+from collections import Counter
 import sys
 input = sys.stdin.readline
 
@@ -8,10 +8,7 @@ check = list(map(int, input().split()))
 
 cnt = 0
 for i in range(n-m+1):
-    for num in permutations(check, m):
-        num = list(num)
-        if numbers[i:i+m] == num:
-            cnt += 1
-            break
+    if Counter(numbers[i:i+m]) == Counter(check):
+        cnt += 1
     
 print(cnt)
