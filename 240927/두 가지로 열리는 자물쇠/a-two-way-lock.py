@@ -2,37 +2,25 @@ n = int(input())
 a1, b1, c1 = list(map(int, input().split()))
 a2, b2, c2 = map(int, input().split())
 
-array1 = []
+array1 = set()
 for i in range(a1-2, a1+2+1):
     for j in range(b1-2, b1+2+1):
         for k in range(c1-2, c1+2+1):
-            if i < 1:
-                i = n+i 
-            if j < 1: 
-                j = n+j
-            if k < 1:
-                k = n+k
-            if 1 <= i <= n and 1 <= j <= n and 1 <= k <= n:
-                array1.append((i, j, k))
+            
+            ni = (i - 1) % n + 1
+            nj = (j - 1) % n + 1
+            nk = (k - 1) % n + 1
+            array1.add((ni, nj, nk))
 
-array2 = []
+array2 = set()
 for i in range(a2-2, a2+2+1):
     for j in range(b2-2, b2+2+1):
         for k in range(c2-2, c2+2+1):
-            if i < 1:
-                i = n+i 
-            if j < 1: 
-                j = n+j
-            if k < 1:
-                k = n+k
+            ni = (i-1) % n + 1
+            nj = (j-1) % n + 1
+            nk = (k-1) % n + 1
             
-            if 1 <= i <= n and 1 <= j <= n and 1 <= k <= n:
-                array2.append((i, j, k))
+            array2.add((ni, nj, nk))
 
-cnt = 0
-for i in array1:
-    for j in array2:
-        if i == j:
-            cnt += 1
-
-print(len(array1) + len(array2) - cnt)
+all_arr = array1 | array2
+print(len(all_arr))
