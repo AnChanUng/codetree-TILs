@@ -8,11 +8,12 @@ for i in range(a1-2, a1+2+1):
         for k in range(c1-2, c1+2+1):
             if i < 1:
                 i = n+i 
-            elif j < 1: 
+            if j < 1: 
                 j = n+j
-            elif k < 1:
+            if k < 1:
                 k = n+k
-            array1.append((i, j, k))
+            if 1 <= i <= n and 1 <= j <= n and 1 <= k <= n:
+                array1.append((i, j, k))
 
 array2 = []
 for i in range(a2-2, a2+2+1):
@@ -20,9 +21,9 @@ for i in range(a2-2, a2+2+1):
         for k in range(c2-2, c2+2+1):
             if i < 1:
                 i = n+i 
-            elif j < 1: 
+            if j < 1: 
                 j = n+j
-            elif k < 1:
+            if k < 1:
                 k = n+k
             
             if 1 <= i <= n and 1 <= j <= n and 1 <= k <= n:
