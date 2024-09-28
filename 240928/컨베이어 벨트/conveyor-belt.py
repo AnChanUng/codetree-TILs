@@ -14,5 +14,5 @@ for i in range(n-1, 0, -1):
 array1[0] = temp2
 array2[0] = temp1
 
-print(array1)
-print(array2)
+print(*array1)
+print(*array2)
