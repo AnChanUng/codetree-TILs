@@ -1,16 +1,21 @@
 n, t = map(int, input().split())
-array1 = list(map(int, input().split()))
-array2 = list(map(int, input().split()))
+u = list(map(int, input().split()))
+d = list(map(int, input().split()))
 
+for i in range(t):
+    temp = u[n-1]
+    
+    for i in range(n-1, 0, -1):
+        u[i] = u[i-1]
+    u[0] = d[n-1]
 
-temp1 = array1[n-1]
-temp2 = array2[n-1]
-for i in range(n-1, 0, -1):
-    array1[i] = array1[i-1]
-    array2[i] = array2[i-1]
+    for i in range(n-1, 0, -1):
+        d[i] = d[i-1]
+    d[0] = temp
 
-array1[0] = temp2
-array2[0] = temp1
+for elem in u:
+    print(elem, end=" ")
+print()
 
-print(*array1)
-print(*array2)
+for elem in d:
+    print(elem, end=" ")
