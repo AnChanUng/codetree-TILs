@@ -24,7 +24,7 @@ def dfs(x, y):
 
         if 0 <= new_x < n and 0 <= new_y < m:
 
-            if visited(new_x, new_y) == 0 and graph[new_x][new_y] == 1: 
+            if visited[new_x][new_y] == 0 and graph[new_x][new_y] == 1: 
                 visited[new_x][new_y] = 1
                 dfs(new_x, new_y)
 
