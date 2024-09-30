@@ -7,14 +7,13 @@ def dfs(x, y):
     dys = [1, 0]
 
     for dx, dy in zip(dxs, dys):
-        new_x = x + dx
-        new_y = y + dy
+        nx = x + dx
+        ny = y + dy
 
         if 0 <= new_x < n and 0 <= new_y < m:
-
-            if visited[new_x][new_y] == 0 and graph[new_x][new_y] == 1: 
-                visited[new_x][new_y] = 1
-                dfs(new_x, new_y)
+            if visited[nx][y] == 0 and graph[nx][ny] == 1: 
+                visited[nx][ny] = 1
+                dfs(nx, ny)
 
 visited[0][0] = 1
 dfs(0, 0)
