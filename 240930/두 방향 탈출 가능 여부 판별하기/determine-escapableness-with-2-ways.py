@@ -10,7 +10,7 @@ def dfs(x, y):
         nx = x + dx
         ny = y + dy
 
-        if 0 <= new_x < n and 0 <= new_y < m:
+        if 0 <= nx < n and 0 <= ny < m:
             if visited[nx][y] == 0 and graph[nx][ny] == 1: 
                 visited[nx][ny] = 1
                 dfs(nx, ny)
