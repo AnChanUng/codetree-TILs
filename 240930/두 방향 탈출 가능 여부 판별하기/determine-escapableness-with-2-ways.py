@@ -1,3 +1,15 @@
+# def in_range(x, y):
+#     return 0 <= x < n and 0 <= y < m
+
+# def can_go(x, y):
+#     if not in_range(x, y):
+#         return False
+    
+#     if visited[x][y] or graph[x][y] == 0:
+#         return False
+    
+#     return True
+
 def dfs(x, y):
     dxs = [0, 1]
     dys = [1, 0]
