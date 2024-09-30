@@ -1,16 +1,13 @@
-n, m = map(int, input().split())
-graph = [list(map(int, input().split())) for _ in range(n)]
-visited = [[0] * m for _ in range(n)]
-
 def dfs(x, y):
-    dx = [-1, 1, 0, 0]  
-    dy = [0, 0, -1, 1]
+    dxs = [0, 1]
+    dys = [1, 0]
 
-    for i in range(4):
-        new_x = x + dx[i]
-        new_y = y + dy[i]
+    for dx, dy in zip(dxs, dys):
+        new_x = x + dx
+        new_y = y + dy
 
         if 0 <= new_x < n and 0 <= new_y < m:
+
             if visited[new_x][new_y] == 0 and graph[new_x][new_y] == 1: 
                 visited[new_x][new_y] = 1
                 dfs(new_x, new_y)
