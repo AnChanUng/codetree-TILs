@@ -1,14 +1,6 @@
-# def in_range(x, y):
-#     return 0 <= x < n and 0 <= y < m
-
-# def can_go(x, y):
-#     if not in_range(x, y):
-#         return False
-    
-#     if visited[x][y] or graph[x][y] == 0:
-#         return False
-    
-#     return True
+n, m = map(int, input().split())
+graph = [list(map(int, input().split())) for _ in range(n)]
+visited = [[0] * m for _ in range(n)]
 
 def dfs(x, y):
     dxs = [0, 1]
