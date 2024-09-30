@@ -15,7 +15,8 @@ def dfs(x, y):
                 visited[new_x][new_y] = 1
                 dfs(new_x, new_y)
 
-visited[0][0] = 1
-dfs(0, 0)
+if graph[0][0] == 1:
+    visited[0][0] = 1
+    dfs(0, 0)
 
 print(visited[n-1][m-1])
