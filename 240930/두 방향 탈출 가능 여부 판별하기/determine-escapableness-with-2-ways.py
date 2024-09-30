@@ -5,11 +5,10 @@ visited = [[0] * m for _ in range(n)]
 def dfs(x, y):
     dxs = [0, 1]
     dys = [1, 0]
-
+    
     for dx, dy in zip(dxs, dys):
         nx = x + dx
         ny = y + dy
-
         if 0 <= nx < n and 0 <= ny < m:
             if visited[nx][y] == 0 and graph[nx][ny] == 1: 
                 visited[nx][ny] = 1
