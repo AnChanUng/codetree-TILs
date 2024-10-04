@@ -8,10 +8,9 @@ array = sorted(map(int, input().split()))
 
 min_m = 0
 
-for i in range((n + 1) // 2):
-    if i < n // 2:
-        pair_sum = array[i] + array[n - 1 - i]
-        min_m = max(min_m, pair_sum)
+for i in range(n // 2):
+    pair_sum = array[i] + array[n - 1 - i]
+    min_m = max(min_m, pair_sum)
 
 if n % 2 == 1:
     middle_value = array[n // 2]
