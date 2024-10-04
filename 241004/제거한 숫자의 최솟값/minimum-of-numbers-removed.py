@@ -6,8 +6,7 @@ input = sys.stdin.readline
 n = int(input().strip())
 array = sorted(map(int, input().split()))
 
-min_m = 
-
+min_m = 0
 
 for i in range((n + 1) // 2):
     if i < n // 2:
