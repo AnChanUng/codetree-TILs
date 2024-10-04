@@ -1,12 +1,11 @@
-from itertools import MAX_INF
-
 n = int(input())
 numbers = list(map(int, input().split()))
 
-max_num = MAX_INF
+min_num = 1001
 for i in range(len(numbers)):
     for j in range(i+1, len(numbers)):
-        if numbers[i] + numbers[j] < max_num:
-            max_num = min(max_num, numbers[i]+numbers[j])
+        num = abs(numbers[i] + numbers[j])
+        if num < max_num:
+            min_num = min(min_num, num)
 
 print(max_num)
