@@ -1,17 +1,17 @@
 import sys
 input = sys.stdin.readline
 
-from collections import deque
-
-queue = deque()
-
 n = int(input().strip())
-array = deque(sorted(map(int, input().split())))
+array = sorted(map(int, input().split()))
 
-max_num = 0
-while len(array) > 1:
-    front = array.popleft()
-    end = array.pop()
-    max_num = max(front+end, max_num)
+min_m = 0
 
-print(max_num)
+for i in range((n+1)//2):
+    if i < n//2:
+        pair_sum = array[i] + array[n-1-i]
+        min = max(min_m, pair_sum)
+
+if n % 2 == 1:
+    min_m = max(min_m, array[n//2])
+
+print(min_m)
