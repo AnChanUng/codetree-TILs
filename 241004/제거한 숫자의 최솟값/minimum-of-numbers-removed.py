@@ -14,6 +14,7 @@ for i in range((n + 1) // 2):
         min_m = max(min_m, pair_sum)
 
 if n % 2 == 1:
-    min_m = max(min_m, array[n // 2])
+    middle_value = array[n // 2]
+    min_m = max(min_m, middle_value)
 
 print(min_m)
