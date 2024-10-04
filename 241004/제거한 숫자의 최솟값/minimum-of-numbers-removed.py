@@ -5,7 +5,7 @@ from collections import deque
 
 queue = deque()
 
-n = int(input())
+n = int(input().strip())
 array = deque(sorted(map(int, input().split())))
 
 max_num = 0
