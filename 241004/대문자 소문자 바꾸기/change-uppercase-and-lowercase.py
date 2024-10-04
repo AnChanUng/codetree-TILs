@@ -6,4 +6,5 @@ for i in range(len(word)):
     else:
         word[i] = word[i].upper()
 
-print(*word)
+for i in word:
+    print(i, end="")
