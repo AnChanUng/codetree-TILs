@@ -11,7 +11,7 @@ while True:
     end = array.pop()
     max_num = max(front+end, max_num)
 
-    if len(array) <= 1:
+    if len(array) <= 0:
         break
 
 print(max_num)
