@@ -1,7 +1,17 @@
+from collections import deque
+
+queue = deque()
+
 n = int(input())
-array = list(map(int, input().split()))
+array = deque(sorted(map(int, input().split())))
 
-array.sort()
+max_num = 0
+while True:
+    front = array.popleft()
+    end = array.pop()
+    max_num = max(front+end, max_num)
 
-m = array[0] + array[-1]
-print(m)
+    if len(array) == 0:
+        break
+
+print(max_num)
