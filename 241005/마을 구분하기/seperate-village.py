@@ -8,8 +8,8 @@ dy = [0, 0, -1, 1]
 
 cnt = 0
 def dfs(x, y):
-    visited[x][y] = 1
     global cnt
+    visited[x][y] = 1
     cnt += 1
 
     for i in range(4):
@@ -19,7 +19,7 @@ def dfs(x, y):
         if 0 <= nx < n and 0 <= ny < n:
             if not visited[nx][ny] and graph[nx][ny] == 1:
                 dfs(nx, ny)
-    
+
 answer = []
 for i in range(n):
     for j in range(n):
