@@ -9,7 +9,7 @@ def bfs(x, y):
     while queue:
         x, y = queue.popleft()
 
-        if x == n - 1 or y == m - 1:
+        if x == n - 1 and y == m - 1:
             return 1
 
         for i in range(4):
