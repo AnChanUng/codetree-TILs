@@ -11,7 +11,7 @@ def bfs(x, y):
     while queue: 
         x, y = queue.popleft()    
         
-        if x == r2 and y == c2:
+        if x == r2-1 and y == c2-1:
             return visited[x][y]-1
 
         for i in range(8):
