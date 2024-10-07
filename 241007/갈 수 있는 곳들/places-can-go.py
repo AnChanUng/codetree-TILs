@@ -6,7 +6,6 @@ dy = [0, 0, -1, 1]
 cnt = 0
 def bfs(x, y):
     global cnt
-    
     if graph[x][y] == 1:
         return 0
     
@@ -22,7 +21,7 @@ def bfs(x, y):
             nx = x + dx[i]
             ny = y + dy[i]
 
-            if 0 <= nx < n and 0 <= ny < n and graph[nx][ny] == 0 and visited[nx][ny] == 1:
+            if 0 <= nx < n and 0 <= ny < n and visited[nx][ny] == 1 and graph[nx][ny] == 0:
                 visited[nx][ny] = 0
                 #print(visited)
                 queue.append((nx, ny))
@@ -33,10 +32,9 @@ def bfs(x, y):
 n, k = map(int, input().split())
 
 graph = [list(map(int, input().split())) for _ in range(n)]
-visited = [[1] * n for _ in range(n+1)]
+visited = [[1] * n for _ in range(n)]
 
 for _ in range(k):
     r, c = map(int, input().split())
-    bfs(r, c)
-
+    bfs(r-1, c-1)
 print(cnt)
