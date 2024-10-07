@@ -12,7 +12,7 @@ def bfs(x, y):
         x, y = queue.popleft()    
         
         if x == r2 and y == c2:
-            return visited[x][y]-1
+            return visited[x][y]
 
         for i in range(8):
             nx = x + dx[i]
@@ -26,7 +26,6 @@ def bfs(x, y):
 n = int(input())
 r1, c1, r2, c2 = map(int, input().split())
 
-graph = [[0] * n for _ in range(n)]
 visited = [[0] * n for _ in range(n)]
 
 print(bfs(r1, c1))
