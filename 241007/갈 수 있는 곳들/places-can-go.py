@@ -6,14 +6,14 @@ dy = [0, 0, -1, 1]
 cnt = 0
 def bfs(x, y):
     global cnt
-    if graph[x][y] == 1:
-        return 0
-    
     queue = deque()
     queue.append((x, y))
     #print("queue", queue)
+    
     visited[x][y] = 0
     cnt += 1
+
+
     while queue:
         x, y = queue.popleft()
         #print("x, y", x, y)
@@ -27,7 +27,6 @@ def bfs(x, y):
                 queue.append((nx, ny))
                 cnt += 1
                 #print("cnt", cnt)
-    return 1
 
 n, k = map(int, input().split())
 
