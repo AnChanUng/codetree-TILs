@@ -28,4 +28,4 @@ r1, c1, r2, c2 = map(int, input().split())
 
 visited = [[0] * n for _ in range(n)]
 
-print(bfs(r1, c1))
+print(bfs(r1-1, c1-1))
