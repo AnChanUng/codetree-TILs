@@ -2,6 +2,7 @@ from collections import deque
 
 dx = [+1,-1,+1,-1,-2,-2,+2,+2]
 dy = [+2,+2,-2,-2,+1,-1,+1,-1]
+
 def bfs(x, y):
     queue = deque()
     queue.append((x, y))
@@ -10,10 +11,10 @@ def bfs(x, y):
     while queue: 
         x, y = queue.popleft()    
         
-        if x == r2-1 and y == c2-1:
+        if x == r2 and y == c2:
             return visited[x][y]-1
 
-        for i in range(4):
+        for i in range(8):
             nx = x + dx[i]
             ny = y + dy[i]
 
