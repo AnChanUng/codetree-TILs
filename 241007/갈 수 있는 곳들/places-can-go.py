@@ -31,5 +31,6 @@ visited = [[1] * n for _ in range(n)]
 
 for _ in range(k):
     r, c = map(int, input().split())
+    bfs(r, c)
 
-    print(bfs(r, c))
+print(cnt)
