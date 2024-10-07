@@ -9,10 +9,8 @@ def bfs(x, y):
     queue = deque()
     queue.append((x, y))
     #print("queue", queue)
-    
     visited[x][y] = 0
     cnt += 1
-
 
     while queue:
         x, y = queue.popleft()
@@ -35,5 +33,6 @@ visited = [[1] * n for _ in range(n)]
 
 for _ in range(k):
     r, c = map(int, input().split())
-    bfs(r-1, c-1)
+    if visited[r-1][c-1] == 1 and graph[r-1][c-1] == 0:
+        bfs(r-1, c-1)
 print(cnt)
