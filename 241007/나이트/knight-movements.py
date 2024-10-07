@@ -12,7 +12,7 @@ def bfs(x, y):
         x, y = queue.popleft()    
         
         if x == r2 and y == c2:
-            return visited[x][y]
+            return visited[x][y]-1
 
         for i in range(8):
             nx = x + dx[i]
