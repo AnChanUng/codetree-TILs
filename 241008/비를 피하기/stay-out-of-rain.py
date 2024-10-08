@@ -5,7 +5,9 @@ dy = [0, 0, -1, 1]
 def bfs(x, y):
     queue = deque()
     queue.append((x, y))
+    visited = [[0] * n for _ in range(n)]
     visited[x][y] = 1
+    distance = [[-1] * n for _ in range(n)]
     distance[x][y] = 0
     
     while queue:
@@ -26,8 +28,6 @@ def bfs(x, y):
 
 n, h, m = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
-visited = [[0] * n for _ in range(n)]
-distance = [[-1] * n for _ in range(n)]
 result = [[0] * n for _ in range(n)]
 for i in range(n):
     for j in range(n):
