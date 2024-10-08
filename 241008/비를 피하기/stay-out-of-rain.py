@@ -34,7 +34,5 @@ for i in range(n):
         if graph[i][j] == 2:
             result[i][j] = bfs(i, j)
 
-for i in range(n):
-    for j in range(n):
-        print(result[i][j], end = " ")
-    print()
+for row in result:
+    print(" ".join(map(str, row)))
