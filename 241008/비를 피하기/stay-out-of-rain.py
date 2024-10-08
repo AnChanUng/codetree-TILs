@@ -31,8 +31,11 @@ def bfs(x, y):
 n, h, m = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
 visited = [[0] * n for _ in range(n)]
-
+result = [[0] * n for _ in range(n)]
 for i in range(n):
     for j in range(n):
-        print(bfs(i, j), end= " ")
-    print()
+        if graph[i][j] == 2:
+            result[i][j] = bfs(i, j)
+
+for row in result:
+    print(" ".join(map(str, row)))
