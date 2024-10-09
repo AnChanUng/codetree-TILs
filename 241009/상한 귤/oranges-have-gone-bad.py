@@ -23,7 +23,7 @@ def bfs(x, y):
                 visited[nx][ny] = 1
                 distance[nx][ny] = distance[x][y] + 1
                 queue.append((nx, ny))
-    return -1
+    return -2
 
 n, k = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
