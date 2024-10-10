@@ -11,13 +11,10 @@ def choose(curr_num):
         print_answer()
         return
 
-    answer.append(1)
-    choose(curr_num + 1)
-    answer.pop()
-
-    answer.append(2)
-    choose(curr_num + 1)
-    answer.pop()
+    for i in range(1, n+1):
+        answer.append(i)
+        choose(curr_num+1)
+        answer.pop()
     return
 
 choose(1)
