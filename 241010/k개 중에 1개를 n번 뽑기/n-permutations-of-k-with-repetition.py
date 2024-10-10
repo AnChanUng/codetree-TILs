@@ -7,7 +7,7 @@ def print_answer():
     print()
 
 def choose(curr_num):
-    if curr_num == n+1:
+    if curr_num == k+1:
         print_answer()
         return
 
