@@ -1,10 +1,23 @@
 k, n = map(int, input().split())
 
-def simple(x, y):
-    for i in range(1, k+1):
-        for j in range(1, k+1):
-            print(i, j, end = " ")
-            print()
+answer = []
+def print_answer():
+    for elem in answer:
+        print(elem, end = " ")
+    print()
 
-for _ in range(n-1):
-    simple(k, n)
+def choose(curr_num):
+    if curr_num == n+1:
+        print_answer()
+        return
+
+    answer.append(1)
+    choose(curr_num + 1)
+    answer.pop()
+
+    answer.append(2)
+    choose(curr_num + 1)
+    answer.pop()
+    return
+
+choose(1)
