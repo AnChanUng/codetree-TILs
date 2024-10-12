@@ -6,7 +6,7 @@ print("result", result)
 for i in range(3):
     for j in range(garo):
         if garo <= j+t:
-            if (j+t)//garo + i >= n:
+            if (j+t)//garo + i >= 3:
                 result[i+(j+t)//garo - 3][(j+t)%garo] = graph[i][j]
             else:
                 result[i+(j+t)//garo][(j+t)%garo] = graph[i][j]
