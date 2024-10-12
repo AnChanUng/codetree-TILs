@@ -8,13 +8,9 @@ result = [[0] * garo for _ in range(3)]
 
 for i in range(3):
     for j in range(garo):
-        if garo <= j+t:
-            if (j+t)//garo + i >= 3:
-                result[i+(j+t)//garo-3][(j+t)%garo] = graph[i][j]
-            else:
-                result[i+(j+t)//garo][(j+t)%garo] = graph[i][j]
-        else:
-            result[i][(j+t)] = graph[i][j]
+        new_row = (i + (j + t) // garo) % 3
+        new_col = (j + t) % garo
+        result[new_row][new_col] = graph[i][j]
 
 for i in range(3):
     for j in range(garo):
