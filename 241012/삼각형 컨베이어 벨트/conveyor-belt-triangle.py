@@ -2,7 +2,7 @@ n, t = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
 garo = len(graph)
 result = [[0] * garo for _ in range(n)]
-print("result", reuslt)
+print("result", result)
 for i in range(n):
     for j in range(garo):
         if garo <= j+t:
