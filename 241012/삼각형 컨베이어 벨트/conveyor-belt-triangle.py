@@ -6,7 +6,7 @@ result = [[0] * garo for _ in range(n)]
 for i in range(n):
     for j in range(garo):
         if garo <= j+t:
-            if (j+t)//garo + i >= n:
+            if (j+t)//garo + i >= garo:
                 result[i+(j+t)//garo - n][(j+t)%garo] = graph[i][j]
             else:
                 result[i+(j+t)//garo][(j+t)%garo] = graph[i][j]
