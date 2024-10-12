@@ -1,21 +1,19 @@
-import sys
-input = sys.stdin.readline
-
 n, t = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
-result = [[0] * 3 for _ in range(n)]
+garo = len(graph)
+result = [[0] * garo for _ in range(n)]
 
 for i in range(n):
-    for j in range(3):
-        if 3 <= j+t:
-            if (j+t)//3 + i >= n:
-                result[i+(j+t)//3 - n][(j+t)%3] = graph[i][j]
+    for j in range(garo):
+        if garo <= j+t:
+            if (j+t)//garo + i >= n:
+                result[i+(j+t)//garo - n][(j+t)%garo] = graph[i][j]
             else:
-                result[i+(j+t)//3][(j+t)%3] = graph[i][j]
+                result[i+(j+t)//garo][(j+t)%garo] = graph[i][j]
         else:
-            result[i][(j+t)%3] = graph[i][j]
+            result[i][(j+t)%garo] = graph[i][j]
 
 for i in range(n):
-    for j in range(3):
+    for j in range(garo):
         print(result[i][j], end= " ")
     print()
