@@ -21,7 +21,7 @@ def encoding(words):
 
 min_total = 1001
 for shift in range(1, len(word)+1):
-    result = str(word[::-1][0:shift][::-1]) + str(word[:len(word)-shift])
+    result = word[shift:] + word[:shift]
     total = encoding(result)
     min_total = min(min_total, len(total))
     
