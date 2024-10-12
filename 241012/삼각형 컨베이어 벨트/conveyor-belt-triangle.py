@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n, t = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
 result = [[0] * 3 for _ in range(n)]
