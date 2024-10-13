@@ -2,7 +2,7 @@ n = int(input())
 
 dp = [0] * 1001
 
-for i in range(5, n+1):
+for i in range(1, n+1):
     if i <= 4:
         dp[i] = 1
     else:
