@@ -12,8 +12,8 @@ for i in range(len(graph)):
         if sum_n <= n:  
             sum_n += graph[j][0]
             sum_t += graph[j][1]
-        print("sum_n", sum_n)
-        print("sum_t", sum_t)
+        #print("sum_n", sum_n)
+        #print("sum_t", sum_t)
     max_sum_t = max(max_sum_t, sum_t)
 
 print(max_sum_t)
