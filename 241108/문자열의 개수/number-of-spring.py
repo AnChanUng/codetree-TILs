@@ -1,7 +1,11 @@
-word = list(input())
-
-print(len(word))
-
-for i in range(len(word)):
-    if i % 2 == 0:
-        print(word[i])
+array = []
+while True:
+    word = input()
+    array.append(word)
+    
+    if word == '0':
+        print(len(array))
+        for i in range(len(array)):
+            if i % 2 == 0:
+                print(array[i])
+        break
