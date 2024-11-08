@@ -4,7 +4,7 @@ while True:
     array.append(word)
     
     if word == '0':
-        print(len(array))
+        print(len(array)-1)
         for i in range(len(array)):
             if i % 2 == 0:
                 print(array[i])
