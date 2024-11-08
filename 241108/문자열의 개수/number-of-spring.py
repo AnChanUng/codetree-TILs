@@ -1,4 +1,4 @@
-word = lits(input())
+word = list(input())
 
 print(len(word))
 
