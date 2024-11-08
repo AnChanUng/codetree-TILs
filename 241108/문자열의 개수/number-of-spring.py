@@ -1,10 +1,7 @@
-cnt = 0
-while True:
-    cnt += 1
-    word = input()
-    
-    if cnt % 2 == 1:
-        print(word)
-    
-    if word == 0:
-        break
+word = lits(input())
+
+print(len(word))
+
+for i in range(len(word)):
+    if i % 2 == 0:
+        print(word[i])
