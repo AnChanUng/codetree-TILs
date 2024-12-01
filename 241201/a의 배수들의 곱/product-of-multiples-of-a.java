@@ -7,13 +7,12 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int c = 1;
+        int prod = 1;
         for(int i=1; i<=b; i++) {
             if (i % a == 0) {
-                //System.out.print("i " + i);
-                c *= i;
+                prod *= i;
             }
         }
-        System.out.print(c);
+        System.out.print(prod);
     }
 }
