@@ -6,7 +6,6 @@ public class Main {
         int a;
         a = sc.nextInt();
 
-        result = a * 2 + 3;
-        System.out.print(result);
+        System.out.print(a*2+3);
     }
 }
