@@ -20,6 +20,6 @@ public class Main {
 
         double average = sum / count;
         System.out.print((int)sum + " ");
-        System.out.print(sum/count++);
+        System.out.print(sum/count);
     }
 }
