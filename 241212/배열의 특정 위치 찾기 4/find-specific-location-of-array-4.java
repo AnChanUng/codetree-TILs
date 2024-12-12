@@ -6,19 +6,17 @@ public class Main {
         int[] arr = new int[10];
         int cnt = 0;
         int sum = 0;
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             int number = sc.nextInt();
 
             if (number % 2 == 0 && number != 0) {
                 sum += number;
                 cnt++;
             } 
-
             if (number == 0) {
                 break;
             }
-
-            System.out.print(sum + " " + cnt);
         }
+        System.out.print(cnt + " " + sum);
     }
 }
