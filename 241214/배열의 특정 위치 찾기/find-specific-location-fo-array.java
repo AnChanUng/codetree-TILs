@@ -23,6 +23,6 @@ public class Main {
                 cnt++;
             }
         }
-        System.out.print(sum + " " + average/cnt);
+        System.out.printf("%d %.1f", sum, average/cnt);
     }
 }
