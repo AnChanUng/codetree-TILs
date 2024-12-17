@@ -5,15 +5,16 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[] arr = new int[10];
+        int[] countArr = new int[10];
+        int[] arr = new int[100];
 
         for (int i=0; i<n; i++) {
-            int number = sc.nextInt();
-            arr[number-1] += 1;
+            arr[i] = sc.nextInt();
+            countArr[arr[i]]++;
         }
 
-        for (int i=0; i<9; i++) {
-            System.out.println(arr[i]);
+        for (int i=1; i<=9; i++) {
+            System.out.println(countArr[i]);
         }
     }
 }
