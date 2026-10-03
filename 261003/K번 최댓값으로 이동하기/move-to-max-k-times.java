@@ -42,7 +42,7 @@ public class Main {
     
     private static void bfs(int x, int y) {
         vis = new boolean[n][n];
-        startVal = grid[r][c];
+        startVal = grid[x][y];
         bestX = -1;
         bestY = -1;
 
