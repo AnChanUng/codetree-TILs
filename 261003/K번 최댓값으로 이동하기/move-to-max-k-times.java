@@ -68,12 +68,20 @@ public class Main {
             }    
         }
     }
-
+    
     private static boolean isBetter(int x, int y) {
-        if(bestX == -1) return true;                          // 후보가 없으면 무조건 1등
-        if(grid[x][y] != grid[bestX][bestY])
-            return grid[x][y] > grid[bestX][bestY];           // 1순위: 값이 큰 쪽
-        if(x != bestX) return x < bestX;                      // 2순위: 행이 작은 쪽
-        return y < bestY;                                     // 3순위: 열이 작은 쪽
+        if(bestX == -1) return true;          // 후보 없으면 무조건 1등
+
+        int curVal = grid[x][y];               // 지금 칸 값
+        int bestVal = grid[bestX][bestY];      // 1등 후보 값
+
+        if(curVal > bestVal) return true;      // 1순위: 값 크면 이김
+        if(curVal < bestVal) return false;     //        값 작으면 짐
+
+        if(x < bestX) return true;             // 2순위: 값 같으면 행 작은 쪽이 이김
+        if(x > bestX) return false;
+
+        if(y < bestY) return true;             // 3순위: 행도 같으면 열 작은 쪽이 이김
+        return false;
     }
 }
