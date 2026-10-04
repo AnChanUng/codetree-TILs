@@ -18,7 +18,7 @@ public class Main {
     static List<int[]> pick;
     static List<int[]> list;
     static int n, k, u, d;
-    static int cnt, maxCnt;
+    static int maxCnt;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
@@ -36,18 +36,17 @@ public class Main {
             }
         }
 
-        maxCnt = 0;
         dfs(0, 0);
         System.out.print(maxCnt);
     }
 
     private static void dfs(int start, int depth) {
         if(depth == k) {
-            cnt = 0;
             vis = new boolean[n][n];
+            int cnt = 0;
             for(int i=0; i<pick.size(); i++) {
                 int[] c = pick.get(i);
-                bfs(c[0], c[1]);
+                cnt += bfs(c[0], c[1]);
             }
             maxCnt = Math.max(maxCnt, cnt);
             return;
@@ -62,11 +61,11 @@ public class Main {
     }
     
     private static int bfs(int x, int y) {
-        if(vis[x][y]) return cnt;
+        if(vis[x][y]) return 0;
         Queue<int[]> q = new ArrayDeque<>();
         q.offer(new int[]{x, y});
         vis[x][y] = true;
-        cnt += 1;
+        int cnt = 1;
         while(!q.isEmpty()) {
             int[] cur = q.poll();
             for(int dir=0; dir<4; dir++) {
