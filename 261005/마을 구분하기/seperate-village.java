@@ -5,8 +5,7 @@ public class Main {
     static int[] dy = {1, 0, -1, 0};
     static int[][] grid;
     static boolean[][] vis;
-    static int n, cnt;
-    static List<Integer> list;
+    static int n;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
@@ -16,13 +15,11 @@ public class Main {
             for (int j = 0; j < n; j++)
                 grid[i][j] = sc.nextInt();
                 
-        list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         for(int i=0; i<n; i++) {
             for(int j=0; j<n; j++) {
-                cnt = 0;
                 if(!vis[i][j] && grid[i][j] == 1) {
-                    cnt++;
-                    bfs(i, j);
+                    list.add(bfs(i, j));
                 }
             }
         }
@@ -34,10 +31,11 @@ public class Main {
         }
     }
 
-    private static void bfs(int x, int y) {
+    private static int bfs(int x, int y) {
         Queue<int[]> q = new ArrayDeque<>();
         q.offer(new int[]{x, y});
         vis[x][y] = true;
+        int cnt = 1;
         while(!q.isEmpty()) {
             int[] cur = q.poll();
             for(int dir=0; dir<4; dir++) {
@@ -53,7 +51,6 @@ public class Main {
                 cnt++;
             }
         }
-
-        list.add(cnt);
+        return cnt;
     }
 }
