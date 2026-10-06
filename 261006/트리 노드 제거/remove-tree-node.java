@@ -22,21 +22,20 @@ public class Main {
             graph[i] = new ArrayList<>();
         }
         
+        int root = 0;
         parent = new int[n];
         for (int i = 0; i < n; i++) {
             parent[i] = sc.nextInt();
             if(parent[i] != -1) { 
                 graph[parent[i]].add(i);
+            } else {
+                root = i;
             }
         }
         deleteNode = sc.nextInt();
 
-        for(int i=0; i<n; i++) {
-            if(parent[deleteNode] == -1) break;
-            if(parent[i] == -1) {
-                dfs(i);
-                break;
-            }
+        if(root != deleteNode) {
+            dfs(root);
         }
 
         System.out.println(cnt);
