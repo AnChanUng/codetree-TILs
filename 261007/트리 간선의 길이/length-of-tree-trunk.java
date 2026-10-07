@@ -6,8 +6,7 @@ public class Main {
     static int n;
     
     static class Node {
-        int v;
-        int d;
+        int v, d;
 
         Node(int v, int d) {
             this.v = v;
@@ -64,7 +63,8 @@ public class Main {
                 q.offer(new int[]{next.v, dist + next.d});
                 vis[next.v] = true;
             }
-        }
+        }        
+        
         return farthest;
     }
 }
